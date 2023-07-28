@@ -32,7 +32,7 @@
             font-weight: normal;
         }
 
-        p {
+        .section_text {
             font-family: "Roboto";
             color: rgb(80, 80, 80);
         }
@@ -41,7 +41,7 @@
             padding-block: 5em;
         }
 
-        .container div {
+        .section {
             display: flex;
             flex-direction: column;
             max-width: 50%;
@@ -49,8 +49,22 @@
             gap: 16px;
         }
 
-        .container div:last-child {
+        .section:last-child {
             margin-bottom: 0;
+            text-align: center;
+        }
+
+        .section:last-child button {
+            width: fit-content;
+            margin: 0 auto;
+            padding: .75em;
+            border: none;
+            outline: none;
+            background-color: rgb(50, 50, 50);
+            color: rgb(244, 244, 244);
+            font-family: "Roboto";
+            font-weight: normal;
+            border-radius: 25px;
         }
 
     </style>
@@ -59,9 +73,9 @@
     <h1>Job</h1>
     <img src="/static/banner.jpg" id="banner" alt="banner image">
     <div class="container" id="container">
-        <div>
+        <div class="section">
             <h2>About SPa</h2>
-            <p>
+            <p class="section_text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
@@ -70,13 +84,13 @@
                 anim id est laborum.
             </p>
         </div>
-        <div>
+        <div class="section">
             <h2>Job Vacancies</h2>
-            <p>TODO - Show the list of opening positions</p>
+            <p class="section_text">TODO - Show the list of opening positions</p>
         </div>
-        <div>
-            <h2>Contact Us</h2>
-            <p>TODO - Show form for newsletter</p>
+        <div class="section">
+            <button>Contact Us</button>
+            <p>Copyright SPa&copy;2023</p>
         </div>
     </div>
 </body>
