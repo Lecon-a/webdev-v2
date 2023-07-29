@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
@@ -38,6 +38,10 @@ about_spa = '''Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
 @app.route("/")
 def index():
     return render_template("home.html", Jobs=data, about=about_spa)
+
+@app.route("/api/jobs")
+def get_jobs():
+    return jsonify(data)
 
 if __name__=="__main__":
     app.run(host="0.0.0.0", debug=True)
