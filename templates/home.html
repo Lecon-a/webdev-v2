@@ -13,6 +13,10 @@
             object-fit: cover;
         }
 
+        .container {
+            width: 60%;
+        }
+
         .job_container {
             border-bottom: 1px solid rgb(173, 171, 171);
             padding: .75em;
@@ -30,15 +34,30 @@
             font-weight: bold;
             margin-bottom: 4px;
         }
+
+        .about_text {
+            text-align: center;
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            text-align: right;
+            font-size: smaller;
+        }
+
+        .footer {
+            padding: 2rem 0;
+        }
+
     </style>
 </head>
 <body>
     <h1 class="text-center mt-2 mb-4">Jobs</h1>
     <img src="/static/banner.jpg" class="img-responsive" id="banner" alt="banner image">
-    <div class="container-fluid">
+    <div class="container">
         <div>
             <h2 class="text-center mt-2 mb-4">About SPa</h2>
-            <p class="lead">
+            <p class="lead about_text">
                 {{about}}
             </p>
         </div>
@@ -51,9 +70,9 @@
             </div>
              
         </div>
-        <div class="text-center">
+        <div class="text-center footer">
             <button class="btn btn-primary btn-lg active">Contact Us</button>
-            <p class="mt-4">Copyright SPa&copy;2023</p>
+            <p class="mt-4 copyright">Copyright SPa&copy;2023</p>
         </div>
     </div>
 </body>
