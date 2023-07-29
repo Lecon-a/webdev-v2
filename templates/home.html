@@ -75,14 +75,14 @@
     <h1 class="text-center mt-4 mb-4">Jobs</h1>
     <img src="/static/banner.jpg" class="img-responsive" id="banner" alt="banner image">
     <div class="container section-container">
-        <div>
-            <h2 class="text-center mt-2 mb-4">About SPa</h2>
+        <div class="pt-4" id="about_us">
+            <h2 class="text-center mb-4">About SPa</h2>
             <p class="lead about_text">
                 {{about}}
             </p>
         </div>
-        <div>
-            <h2 class="text-center">Job Vacancies</h2>
+        <div class="pt-4" id="jobs">
+            <h2 class="text-center mb-4">Job Vacancies</h2>
             <div>
                 {% for job in Jobs %}
                     {% include 'jobs.html' %}
@@ -90,7 +90,7 @@
             </div>
              
         </div>
-        <div class="text-center footer">
+        <div class="text-center footer" id="contact_us">
             <button class="btn btn-primary btn-lg active">Contact Us</button>
             <p class="mt-4 copyright">Copyright SPa&copy;2023</p>
         </div>
