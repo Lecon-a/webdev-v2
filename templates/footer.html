@@ -1,0 +1,10 @@
+<div class="container">
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            {% for tab in tabs %}
+                <li class="nav-item"><a href="#{% if tab != 'Home' %}{{ tab.split(' ')[0].lower() }}{% endif %}" class="nav-link px-2 text-body-secondary">{{ tab }}</a></li>
+            {% endfor %}
+        </ul>
+      <p class="text-center text-body-secondary">&copy; 2023 JOBSPa, Inc</p>
+    </footer>
+  </div>

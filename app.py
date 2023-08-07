@@ -34,10 +34,11 @@ about_spa = '''Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
                 dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
                 anim id est laborum.'''
+tabs = ["Home", "Vacancies", "About Us", "Contact Us"]
 
 @app.route("/")
 def index():
-    return render_template("home.html", Jobs=data, about=about_spa)
+    return render_template("home.html", Jobs=data, about=about_spa, company_name="JOBSPa", tabs=tabs)
 
 @app.route("/api/jobs")
 def get_jobs():
