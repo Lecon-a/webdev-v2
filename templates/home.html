@@ -13,7 +13,7 @@
         }
 
         .section-container {
-            width: 60%;
+            width: 80%;
         }
 
         #banner {
@@ -54,6 +54,10 @@
             padding: 2rem 0;
         }
 
+        #about_image {
+            height: 350px;
+        }
+
         @media screen and (max-width: 600px) {
             
             .section-container {
@@ -72,14 +76,18 @@
 </head>
 <body>
     {% include 'nav.html' %}
-    <h1 class="text-center mt-4 mb-4">{{ company_name }}</h1>
     <img src="/static/banner.jpg" class="img-responsive" id="banner" alt="banner image">
+    <h1 class="text-center mt-4 mb-4">{{ company_name }}</h1>
     <div class="container section-container">
-        <div class="pt-4" id="about">
-            <h2 class="text-center mb-4">About SPa</h2>
-            <p class="lead about_text">
-                {{about}}
-            </p>
+        <div class="pt-4 row" id="about">
+            <div class="col-md-6">
+                <p class="lead about_text">
+                    {{about}}
+                </p>
+            </div>
+            <div class="d-none d-md-block col-md-6">
+                <img id="about_image" class="rounded" src="/static/people-working.jpg" alt="About image">
+            </div>
         </div>
         <div class="pt-4" id="vacancies">
             <h2 class="text-center mb-4">Job Vacancies</h2>
