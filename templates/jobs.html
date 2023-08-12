@@ -3,7 +3,7 @@
         <h4 class="job_title">{{job.title}}</h4>
         <div><b>Location: </b>{{job.location}}</div>
         {% if job.salary %}
-            <div><b>Salary: </b>{{job.salary}}</div>
+            <div><b>Salary: </b>{% if job.currency %}{{ job.currency }}{% endif %} {{job.salary}}</div>
         {% endif %}
     </div>
     <div>
