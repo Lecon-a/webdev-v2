@@ -2,6 +2,7 @@ from flask import Flask, render_template, jsonify
 from database import load_data
 
 app = Flask(__name__)
+# get data from database
 data = load_data()
 
 about_spa = '''Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
