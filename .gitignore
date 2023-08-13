@@ -1,2 +1,2 @@
 venv/
-db_info.py
+.env
