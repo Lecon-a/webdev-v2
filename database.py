@@ -1,8 +1,7 @@
 from sqlalchemy import create_engine, text
-from db_info import params
+import os
 
-connection_string = f"mysql+pymysql://{params['username']}:{params['password']}@localhost:3306/{params['dbname']}?charset=utf8mb4"
-
+connection_string = os.environ.get('DB_CONNECTION_STRING')
 engine = create_engine(connection_string)
 
 def load_data():
