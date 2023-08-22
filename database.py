@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine, text
 import os
 
-connection_string = os.environ.get('DB_CONNECTION_STRING')
+connection_string = os.environ['DB_CONNECTION_STRING']
 engine = create_engine(connection_string)
 
 def load_data():
