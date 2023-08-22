@@ -19,7 +19,11 @@ def index():
 
 @app.route("/api/jobs")
 def get_jobs():
-    return jsonify(data)
+    return jsonify({
+        'data': data,
+        'totalCount': len(data),
+        'success': True
+    })
 
 if __name__=="__main__":
     app.run(host="0.0.0.0", debug=True)

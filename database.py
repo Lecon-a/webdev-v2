@@ -8,6 +8,8 @@ def load_data():
     data = []
     with engine.connect() as conn:
         result = conn.execute(text("select * from jobs"))
+        # print(type(result))
         for row in result:
+            # print(type(row))
             data.append(row._asdict())
     return data
